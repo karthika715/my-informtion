@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #details {
+            display: none;
+        }
+
+        #show-btn {
+            cursor: pointer;
+            color: rgb(83, 8, 223);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Information</h1>
+        <p>Name: Karthika</p>
+        <p>College: KMC (Muthur)</p>
+        <p>Study: BCA</p>
+
+        <div id="details">
+            <p>Address: Andipalayam</p>
+            <p>City: Kadathur(gobi)</p>
+            <p>Contry: India</p>
+            <p>Blood gruop: o+ </p>
+            <p>Email: krthikaayysmy715@gmail.com</p>
+            <p>Phone: +91 887-0872-663</p>
+
+        </div>
+
+        <p id="show-btn">Show More</p>
+
+        <script>
+            const details = document.getElementById("details");
+            const showBtn = document.getElementById("show-btn");
+
+            let isDetailsVisible = false;
+
+            showBtn.addEventListener("click", () => {
+                if (isDetailsVisible) {
+                    details.style.display = "none";
+                    showBtn.textContent = "Show More";
+                } else {
+                    details.style.display = "block";
+                    showBtn.textContent = "Show Less";
+                }
+                isDetailsVisible = !isDetailsVisible;
+            });
+        </script>
+    </div>
+</body>
+</html>
